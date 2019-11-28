@@ -4,11 +4,11 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
-import { ProgressBarComponent } from "./3ml.progress-bar/3ml.comp.progress-bar";
+import { Counter } from './3ml.counter/3ml.comp.counter';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, ProgressBarComponent],
+  declarations: [AppComponent, HelloComponent, Counter],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
