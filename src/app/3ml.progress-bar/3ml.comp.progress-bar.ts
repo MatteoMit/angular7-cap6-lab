@@ -53,12 +53,14 @@ export class ProgressBarComponent {
   @Input() progress: number;
   @Output() progressChange = new EventEmitter<number>();
   private increment = 15;
-  onClick(event: MouseEvent) {
+  private disabled = false;
+  onClick(event) {
     const delta = 100 - this.progress;
     if (delta > this.increment) {
-      this.progressChange.emit(this.increment);
+      this.progress += this.increment;
     } else {
-      this.progressChange.emit(delta);
+      this.progress += delta;
     }
+    this.progressChange.emit(this.progress);
   }
 }

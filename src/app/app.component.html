@@ -2,6 +2,7 @@
 	<h1>
 		Progress: <span>{{ progress }}%</span>
 	</h1>
-	<simple-progress-bar [progress]="progress" (progressChange)="updateProgress($event)">
-	</simple-progress-bar>
+<simple-progress-bar 
+  [(progress)]="progress">
+</simple-progress-bar>
 </div>
