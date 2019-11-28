@@ -49,7 +49,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
     `
   ]
 })
-export class ProgressBar {
+export class ProgressBarComponent {
   @Input() progress: number;
   @Output() progressChange = new EventEmitter<number>();
   private increment = 15;
