@@ -4,7 +4,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   selector: "simple-progress-bar",
   template: `
     <div class="container">
-      <div class="progress" [style.width.%]="progress">{{ progress }}%</div>
+      <div class="progress" [style.width.%]="inputProgressVal">{{ inputProgressVal }}%</div>
     </div>
     <button (click)="onClick($event)">+{{ increment }}</button>
   `,
@@ -50,15 +50,16 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   ]
 })
 export class ProgressBarComponent {
-  @Input() progress: number;
-  @Output() progressChange = new EventEmitter<number>();
+  @Input() inputProgressVal: number;
+  @Output() outputProgressChange = new EventEmitter<number>();
   private increment = 15;
+
   onClick(event: MouseEvent) {
-    const delta = 100 - this.progress;
+    const delta = 100 - this.inputProgressVal;
     if (delta > this.increment) {
-      this.progressChange.emit(this.increment);
+      this.outputProgressChange.emit(this.increment);
     } else {
-      this.progressChange.emit(delta);
+      this.outputProgressChange.emit(delta);
     }
   }
 }

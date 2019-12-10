@@ -3,7 +3,7 @@
 		Progress: <span>{{ progress }}%</span>
 	</h1>
 	<simple-progress-bar 
-      [progress]="progressione" 
-      (progressChange)="updateProgress($event)">
+      [inputProgressVal]="progressione" 
+      (outputProgressChange)="updateProgress($event)">
 	</simple-progress-bar>
 </div>
