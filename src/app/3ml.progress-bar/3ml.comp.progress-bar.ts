@@ -52,8 +52,10 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 export class ProgressBarComponent {
   @Input() progress: number;
   @Output() progressChange = new EventEmitter<number>();
+  
   private increment = 15;
   private disabled = false;
+
   onClick(event) {
     const delta = 100 - this.progress;
     if (delta > this.increment) {

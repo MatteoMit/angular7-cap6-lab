@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class AppComponent implements OnInit {
   progress = 0;
+  
   ngOnInit(): void {
     setTimeout(() => {
       this.progress = 20;
