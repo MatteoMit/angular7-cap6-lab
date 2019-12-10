@@ -52,6 +52,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 export class ProgressBarComponent {
   @Input() inputProgressVal: number;
   @Output() outputProgressChange = new EventEmitter<number>();
+  
   private increment = 15;
 
   onClick(event: MouseEvent) {

@@ -5,9 +5,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  progressione = 0;
+  curProgressVal = 0;
   ngOnInit(): void {}
   updateProgress(value: number): void {
-    this.progressione += value;
+    this.curProgressVal += value;
   }
 }
