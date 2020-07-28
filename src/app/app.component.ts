@@ -5,21 +5,22 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent implements OnInit {
-  progress = 0;
+  caricamento = 0;
+
   ngOnInit(): void {
-    this.updateProgress(6);
+    this.updateProgress(10);
   }
   updateProgress(value: number): void {
-    if (this.progress >= 100 || value === 0) {
+    if (this.caricamento >= 100 || value === 0) {
       return;
     }
-    const delta = 100 - this.progress;
+    const delta = 100 - this.caricamento;
     if (value > delta) {
       value = delta;
     }
     setTimeout(() => {
-      this.progress += value;
+      this.caricamento += value;
       this.updateProgress(value);
-    }, 200);
+    }, 1000);
   }
 }

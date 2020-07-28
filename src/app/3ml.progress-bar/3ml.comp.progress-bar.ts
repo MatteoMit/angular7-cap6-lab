@@ -3,7 +3,9 @@ import { Component, Input } from "@angular/core";
   selector: "simple-progress-bar",
   template: `
     <div class="container">
-      <div class="progress" [style.width.%]="progress">{{ progress }}%</div>
+      <div class="progress" 
+        [style.width.%]="progress">{{ progress }}%
+        </div>
     </div>
   `,
   styles: [
