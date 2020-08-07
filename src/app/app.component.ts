@@ -15,6 +15,7 @@ import { Component } from "@angular/core";
   `
 })
 export class AppComponent {
+  title = 'Scambio di informazioni fra componenti adiacenti';
   counter1 = 0;
   counter2 = 1;
 }
