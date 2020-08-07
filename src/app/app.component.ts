@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 @Component({
   selector: "simple-root",
   template: `
+    <h3> {{title}} </h3>
     <simple-counter
       title="Componente 1"
       [counter]="counter1"
