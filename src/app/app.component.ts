@@ -13,7 +13,7 @@ import { Component } from "@angular/core";
 
     <!-- 2-WAY BINDING for "simple-counter1" -->
     <simple-counter1
-      title="Componente 1"
+      title="Componente 1 (2-way binding)"
       [(counterSimple1)] = "counter1">
       (update1)="updateCounter1($event)"
     ></simple-counter1>
