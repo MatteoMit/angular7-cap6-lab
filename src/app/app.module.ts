@@ -4,11 +4,12 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
-import { Counter } from './3ml.counter/3ml.comp.counter';
+import { SimpleCounter1 } from "./simple-counter1/simple-counter1.component";
+import { SimpleCounter2 } from "./simple-counter2/simple-counter2.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent, Counter],
+  declarations: [AppComponent, HelloComponent, SimpleCounter1, SimpleCounter2],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
