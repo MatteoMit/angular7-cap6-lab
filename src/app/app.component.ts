@@ -3,6 +3,8 @@ import { Component } from "@angular/core";
   selector: "simple-root",
   template: `
     <h3> {{title}} </h3>
+
+    <!-- 2-WAY BINDING for "simple-counter1" -->
     <simple-counter1
       title="Componente 1"
       [(counterSimple1)] = "counter1">
@@ -29,7 +31,7 @@ export class AppComponent {
     this.counter2 += value;
   }
 */
-  // NEW versione for COUNTER1
+  // NEW version for COUNTER1: "2-way binding"
   get counter1(): number {
     console.log("get counter, counter1: " + this._counter1);
     return this._counter1;
@@ -39,6 +41,8 @@ export class AppComponent {
     console.log("set counter, counter2: " + this.counter2);
   }
 
+  
+  // Il "2-way binding" non è stato VOLUTAMENTE fatto sul componente SIMPLE-COUNTER2
   updateCounter2(value: number) {
     this.counter1 += value;
   }

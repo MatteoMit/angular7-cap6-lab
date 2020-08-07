@@ -20,8 +20,9 @@ export class SimpleCounter1 {
   onClick(event: MouseEvent) {
     this.update.emit(1);
   */
-  
+
   @Output() counterSimple1Change = new EventEmitter<number>();
+  
   onClick(event: MouseEvent) {
     this.counterSimple1Change.emit(1);
   }
