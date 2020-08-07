@@ -3,6 +3,13 @@ import { Component } from "@angular/core";
   selector: "simple-root",
   template: `
     <h3> {{title}} </h3>
+    <!--
+        <simple-counter1 
+          title = "Componente 1"
+          [counterSimple1] = "counter1"
+          (update1) = "updadateCounter1($event)">
+        </simple-counter1>
+    -->
 
     <!-- 2-WAY BINDING for "simple-counter1" -->
     <simple-counter1
@@ -12,6 +19,7 @@ import { Component } from "@angular/core";
     ></simple-counter1>
     <br />
     <p>------ ------ ------ ------ -----</p>
+
     <simple-counter2
       title="Componente 2"
       [counterSimple2]="counter2"
