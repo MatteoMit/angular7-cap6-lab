@@ -2,6 +2,8 @@ import { Component } from "@angular/core";
 @Component({
   selector: "simple-root",
   template: `
+    <h3> {{title}} </h3>
+
     <simple-counter1
       title="Componente 1"
       [counterSimple1]="counter1"
@@ -17,6 +19,7 @@ import { Component } from "@angular/core";
   `
 })
 export class AppComponent {
+  title = 'Scambio di informazioni fra componenti adiacenti';
 
   counter1 = 0;
   counter2 = 0;
