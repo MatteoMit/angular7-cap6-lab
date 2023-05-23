@@ -5,5 +5,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  progress = 20;
+  avanzamento = 20;
 }
